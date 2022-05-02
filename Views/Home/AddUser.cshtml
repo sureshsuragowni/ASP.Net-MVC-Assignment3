@@ -1,0 +1,30 @@
+﻿<h2>AddUser</h2>
+@model MVC_Assign.Models.User
+    @{ 
+        Layout = "~/views/Shared/_Layout.cshtml";
+    }
+
+
+@using (Html.BeginForm("SaveUser", "Home"))
+{
+<p>
+    User Name:@Html.TextBoxFor(user => user.UserName)
+   
+
+</p>
+
+<p>
+    Password:  @Html.PasswordFor(user => user.Password)
+
+
+</p>
+
+    <input type="submit" value="Add User" />
+}
+
+@{
+    ViewBag.Title = "AddUser";
+}
+
+<h2>AddUser</h2>
+
